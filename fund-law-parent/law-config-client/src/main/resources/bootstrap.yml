@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+#      uri: http://localhost:8769
+      fail-fast: true
+      discovery:
+        enabled: true
+        serviceId: law-config-server
+
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.0.12:3306/ag_auth?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: nsat
+    password: nsat
+  
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8767
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

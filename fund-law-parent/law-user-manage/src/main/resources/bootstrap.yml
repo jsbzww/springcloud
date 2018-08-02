@@ -1,0 +1,54 @@
+server:
+  port: 8776
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+      
+management:
+  security:
+    enabled: false
+      
+spring:
+  application:
+    name: law-user
+  cloud:
+    config:
+      fail-fast: true
+      discovery:
+        enabled: true
+        serviceId: law-config-server
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.0.12:3306/ag_auth?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: nsat
+    password: nsat
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirms: true
+    virtual-host: /
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password: 
+    timeout: 0
+    pool:
+      max-active: 8
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0
+  session:
+    store-type: none
+  
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

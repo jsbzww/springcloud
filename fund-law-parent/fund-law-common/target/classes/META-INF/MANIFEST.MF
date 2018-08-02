@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: fund-law-common
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: jzw
+Implementation-Vendor-Id: com.law
+Build-Jdk: 1.8.0_51
+Implementation-URL: http://projects.spring.io/spring-boot/fund-law-par
+ ent/fund-law-common/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
